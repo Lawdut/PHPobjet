@@ -9,16 +9,25 @@
 <body>
     <h1> Titre principal</h1>
 
-    <?php require 'classes/utilisateur.class.php';
+    <?php require 'utilisateur.php';
 
     $pierre = new utilisateur();
     $mathilde = new utilisateur();
 
-    $pierre->user_name = 'Pierre';
-    $pierre->user_pass = 'abcdef';
+    /*$pierre->user_name = 'Pierre';
+    $pierre->user_pass = 'abcdef';*/
 
-    $mathilde->user_name = 'Mathilde';
-    $mathilde->user_pass = 123456;
+    $pierre->setNom('Pierre');
+    $pierre->setPass('abcdef');
+    
+
+
+    $mathilde->setNom('Mathilde');
+    $mathilde->setPass(123456);
+
+    echo $pierre->getNom().'<br>';
+    echo $mathilde->getNom().'<br>';
+
     ?>
 
     <p> Un paragraphe </p>
