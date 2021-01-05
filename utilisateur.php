@@ -17,7 +17,7 @@ class utilisateur {
         $this->user_pass = $new_user_pass;
     }*/
 ////////////////////////////////////////////////////////////////////////-->
-    public function __construc($nom, $pass){
+    public function __construct($nom, $pass){
 
         $this->user_name = $nom;
         $this->user_pass = $pass;

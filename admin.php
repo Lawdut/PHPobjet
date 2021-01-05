@@ -1,7 +1,7 @@
 <?php
 
     class admin extends utilisateur{
-
+        
         public function getNom2(){
             return $this->user_name;
         }

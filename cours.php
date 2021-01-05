@@ -70,7 +70,7 @@
         echo $pierre->getNom2().'<br>';
         echo $pierre->getNom().'<br>';
         echo $mathilde->getNom().'<br>';
-        print_r($mathilde);
+        //print_r($mathilde);
     ?>
 
 
