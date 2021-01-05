@@ -64,13 +64,38 @@
         require 'utilisateur.php';
         require 'admin.php';
 
-        $pierre = new admin ('Pierre', 'abcdef');
-        $mathilde = new utilisateur ('Mathilde', 123456);
+        $pierre = new admin ('Pierre', 'abcdef', 'Sud');
+        $mathilde = new admin ('Mathilde', 123456, 'Nord');
+        $florian = new utilisateur('Florian', 'mdp', 'Ouest');
 
-        //echo $pierre->getNom2().'<br>';
-        echo $pierre->getNom().'<br>';
-        echo $mathilde->getNom().'<br>';
-        //print_r($mathilde);
+        $pierre->setPrixAbo();
+        $mathilde->setPrixAbo();
+        $florian->setPrixAbo();
+
+        $u = 'utilisateur'; // en PHP, on peut stocker une classe dans une variable (en l'occurence, $u stock la class utilisateur)
+        echo 'Valeur de ABONNEMENT dans utilisateur : ' .$u::ABONNEMENT.'<br>';
+        echo 'Valeur de ABONNEMENT dans administrateur : ' .admin::ABONNEMENT.'<br>';
+
+        echo 'Prix de ABONNEMENT pour ';
+        $pierre->getNom();
+        echo ' : ';
+        $pierre->getPrixAbo();
+
+        echo '<br>';
+
+        echo 'Prix de ABONNEMENT pour ';
+        $mathilde->getNom();
+        echo ' : ';
+        $mathilde->getPrixAbo();
+
+        echo '<br>';
+        
+        echo 'Prix de ABONNEMENT pour ';
+        $florian->getNom();
+        echo ' : ';
+        $florian->getPrixAbo();
+
+        echo '<br>';
 
         $pierre->setBan('Paul');
         $pierre->setBan('Jacques');

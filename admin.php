@@ -3,9 +3,12 @@
     class admin extends utilisateur{
         protected $ban;
 
-        public function __construct($nom, $pass){
+        public const ABONNEMENT = 5;
+
+        public function __construct($nom, $pass, $reg){
             $this->user_name = strtoupper($nom);
             $this->user_pass = $pass;
+            $this->user_region = $reg;
         }
         
         public function setBan($b) {
@@ -34,4 +37,5 @@
             else {
                 return $this->prix_abo = parent::ABONNEMENT /2;
             }
+        }
     }

@@ -34,9 +34,9 @@ class utilisateur {
         
     }
 
-    public function setPrixAbo () {
+    public function setPrixAbo() {
         if ($this->user_region === 'Sud') {
-            return $this->prix_abo = self::ABONNEMENT /2;
+            return $this->prix_abo = self::ABONNEMENT / 2;
         }
         else {
             return $this->prix_abo = self::ABONNEMENT;
@@ -44,7 +44,7 @@ class utilisateur {
     }
 
     public function getPrixAbo() {
-        echo $this->prixA_abo;
+        echo $this->prix_abo;
     }
     public function getNom(){
         echo $this->user_name;
