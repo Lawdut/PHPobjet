@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Objet</title>
-    <link rel="stylesheet" href="cours.css">
+    <!--<link rel="stylesheet" href="cours.css">-->
 </head>
 <body>
     <h1> Titre principal</h1>
 
-    <?php /* require 'utilisateur.php';
 
-<!-- ////////////////////////////////////////////////////////////////////////-->
-    // CLASSES, OBJETS ET INSTANCE
+<!-- ////////////////////////////////////////////////////////////////////////
+    CLASSES, OBJETS ET INSTANCE-->
+    <?php /* require 'utilisateur.class.php';
+
+
 
     $pierre = new utilisateur();
     $mathilde = new utilisateur();
@@ -35,7 +37,7 @@
 <!-- ////////////////////////////////////////////////////////////////////////-->
     <!-- CONSTRUCTEUR ET DESTRUCTEUR D'OBJETS
 
-    <form action = 'index.php' method='post'>
+    <form action = 'cours.php' method='post'>
 
         <label for ='nom'> Nom d'utilisateur : </label>
         <input type = 'text' name ='nom' id='nom'><br>
@@ -47,7 +49,7 @@
     </form>
 
     <?php 
-        require 'utilisateur.class.php';
+        /*require 'utilisateur.class.php';
 
         $pierre = new utilisateur($_POST['nom'], $_POST['pass']);
         echo $pierre->getNom().'<br>';*/
@@ -57,7 +59,19 @@
     -->
 <!-- ////////////////////////////////////////////////////////////////////////-->
 
+    <!-- HERITAGE-->
+    <?php 
+        require 'utilisateur.php';
+        require 'admin.php';
 
+        $pierre = new admin ('Pierre', 'abcdef');
+        $mathilde = new utilisateur ('Mathilde', 123456);
+
+        echo $pierre->getNom2().'<br>';
+        echo $pierre->getNom().'<br>';
+        echo $mathilde->getNom().'<br>';
+        print_r($mathilde);
+    ?>
 
 
     <p> Un paragraphe </p>
