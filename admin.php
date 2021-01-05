@@ -1,7 +1,7 @@
 <?php
 
     class admin extends utilisateur{
-        protected $ban;
+        protected static $ban;
 
         public const ABONNEMENT = 5;
 
@@ -11,8 +11,11 @@
             $this->user_region = $reg;
         }
         
-        public function setBan($b) {
-            $this->ban[].=$b;
+        public function setBan(...$b) {
+            foreach($b as $banned){
+                self::$ban[] .=$banned;
+            }
+            
         }
         /*public function getNom2(){
             return $this->user_name;
@@ -25,7 +28,7 @@
 
         public function getBan() {
             echo 'Utilisateur bannis par ' .$this->user_name. ' : ';
-            foreach($this->ban as $valeur) {
+            foreach(self::$ban as $valeur) {
                 echo $valeur. ', ';
             }
         }
