@@ -4,7 +4,7 @@ class utilisateur {
     private $user_name;
     private $user_pass;
     
-    public function getNom(){
+    /*public function getNom(){
         return $this->user_name;
     }
 
@@ -15,6 +15,16 @@ class utilisateur {
 
     public function setPass($new_user_pass){
         $this->user_pass = $new_user_pass;
+    }*/
+
+    public function __construc($nom, $pass){
+
+        $this->user_name = $nom;
+        $this->user_pass = $pass;
+    }
+
+    public function getNom(){
+        return $this->user_name;
     }
 }
 ?>
