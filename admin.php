@@ -26,4 +26,12 @@
                 echo $valeur. ', ';
             }
         }
+
+        public function setPrixAbo() {
+            if ($this->user_region === 'Sud') {
+                return $this->prix_abo = self::ABONNEMENT;
+            }
+            else {
+                return $this->prix_abo = parent::ABONNEMENT /2;
+            }
     }
