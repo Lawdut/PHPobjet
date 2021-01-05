@@ -3,8 +3,9 @@
     class admin extends utilisateur{
         protected $ban;
 
-        public function getNom(){
-            return strtoupper($this->user_name);
+        public function __construct($nom, $pass){
+            $this->user_name = strtoupper($nom);
+            $this->user_pass = $pass;
         }
         
         public function setBan($b) {
@@ -12,11 +13,12 @@
         }
         /*public function getNom2(){
             return $this->user_name;
-        }
+        }*/
 
         public function getNom(){
-            return $this->user_name;
-        }*/
+            parent::getNom();
+            echo ' (depuis la classe étendue)<br>';
+        }
 
         public function getBan() {
             echo 'Utilisateur bannis par ' .$this->user_name. ' : ';
