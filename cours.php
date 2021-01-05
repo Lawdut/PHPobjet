@@ -47,7 +47,7 @@
     </form>
 
     <?php 
-        require 'utilisateur.php';
+        require 'utilisateur.class.php';
 
         $pierre = new utilisateur($_POST['nom'], $_POST['pass']);
         echo $pierre->getNom().'<br>';*/
