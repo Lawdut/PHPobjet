@@ -2,6 +2,10 @@
 
     class admin extends utilisateur{
         protected $ban;
+
+        public function getNom(){
+            return strtoupper($this->user_name);
+        }
         
         public function setBan($b) {
             $this->ban[].=$b;
