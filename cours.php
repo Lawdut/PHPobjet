@@ -67,10 +67,15 @@
         $pierre = new admin ('Pierre', 'abcdef');
         $mathilde = new utilisateur ('Mathilde', 123456);
 
-        echo $pierre->getNom2().'<br>';
+        //echo $pierre->getNom2().'<br>';
         echo $pierre->getNom().'<br>';
         echo $mathilde->getNom().'<br>';
         //print_r($mathilde);
+
+        $pierre->setBan('Paul');
+        $pierre->setBan('Jacques');
+        echo $pierre->getBan();
+
     ?>
 
 
