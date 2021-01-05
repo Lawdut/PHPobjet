@@ -11,6 +11,9 @@
 
     <?php /* require 'utilisateur.php';
 
+<!-- ////////////////////////////////////////////////////////////////////////-->
+    // CLASSES, OBJETS ET INSTANCE
+
     $pierre = new utilisateur();
     $mathilde = new utilisateur();
 
@@ -29,6 +32,8 @@
     echo $mathilde->getNom().'<br>';
 
     */?>
+<!-- ////////////////////////////////////////////////////////////////////////-->
+    <!-- CONSTRUCTEUR ET DESTRUCTEUR D'OBJETS
 
     <form action = 'index.php' method='post'>
 
@@ -45,9 +50,16 @@
         require 'utilisateur.php';
 
         $pierre = new utilisateur($_POST['nom'], $_POST['pass']);
-        echo $pierre->getNom().'<br>';
+        echo $pierre->getNom().'<br>';*/
 
     ?>    
+
+    -->
+<!-- ////////////////////////////////////////////////////////////////////////-->
+
+
+
+
     <p> Un paragraphe </p>
 </body>
 </html>
